@@ -1,0 +1,113 @@
+
+
+
+
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+    <script> 
+         //function that display value 
+         function dis(val) 
+         { 
+             document.getElementById("display").value+=val
+         } 
+           
+         //function that evaluates the digit and return display 
+         function solve() 
+         { 
+             let x = document.getElementById("display").value 
+             let y = eval(x) 
+             document.getElementById("display").value = y 
+         } 
+           
+         //function that clear the display 
+         function clr() 
+         { 
+             document.getElementById("display").value = "" 
+         }
+
+      </script> 
+      <!-- for styling -->
+      <style> 
+         .title{ 
+         margin-bottom: 10px; 
+         text-align:center; 
+         width: 210px; 
+         color:#6e80f0; 
+         border: solid #6e80f0 2px; 
+         } 
+  
+         input[type="button"] 
+         { 
+         background-color:#05fabd; 
+         color: #6e80f0; 
+         border: solid #6e80f0 2px; 
+         width:100% 
+         } 
+  
+         input[type="text"] 
+         { 
+         background-color:white; 
+         border: solid #6e80f0 2px; 
+         width:100% 
+         } 
+      </style> 
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title></title>
+  </head>
+  <body>
+    
+    <div class ="title">JS CALCULATOR</div> 
+      <table border="1"> 
+         <tr> 
+            <td colspan="3"><input type="text" id="display"/></td> 
+            <!-- clr() function will call clr to clear all value -->
+            <td><input type="button" id="clear" value="c" onclick="clr()"/> </td> 
+         </tr> 
+         <tr> 
+            <!-- create button and assign value to each button -->
+            <!-- dis("1") will call function dis to display value -->
+            <td><input type="button" id="one" value="1" onclick="dis('1')"/> </td> 
+            <td><input type="button" id="two" value="2" onclick="dis('2')"/> </td> 
+            <td><input type="button" id="three" value="3" onclick="dis('3')"/> </td> 
+            <td><input type="button" id="divide" value="/" onclick="dis('/')"/> </td> 
+         </tr> 
+         <tr> 
+            <td><input type="button" id="four" value="4" onclick="dis('4')"/> </td> 
+            <td><input type="button" id="five" value="5" onclick="dis('5')"/> </td> 
+            <td><input type="button" id="six" value="6" onclick="dis('6')"/> </td> 
+            <td><input type="button" id="subtract" value="-" onclick="dis('-')"/> </td> 
+         </tr> 
+         <tr> 
+            <td><input type="button" id="seven" value="7" onclick="dis('7')"/> </td> 
+            <td><input type="button" id="eight" value="8" onclick="dis('8')"/> </td> 
+            <td><input type="button" id="nine" value="9" onclick="dis('9')"/> </td> 
+            <td><input type="button" id="add" value="+" onclick="dis('+')"/> </td> 
+         </tr> 
+         <tr> 
+            <td><input type="button" id="decimal" value="." onclick="dis('.')"/> </td> 
+            <td><input type="button" id="zero" value="0" onclick="dis('0')"/> </td> 
+            <!-- solve function call function solve to evaluate value -->
+            <td><input type="button" id="equals" value="=" onclick="solve()"/> </td> 
+            <td><input type="button" id="multiply" value="*" onclick="dis('*')"/> </td> 
+         </tr> 
+      </table> 
+      <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    
+  </body>
+</html>
